@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -12,5 +13,7 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith("테스트"):
         await message.channel.send("네?")
-
-client.run("OTA5MDg4MDkyMTU2MTk4OTgz.YY_MQw.oiBKY_9PdEyKH6zcJ1AqF5GTXyk")
+                            
+            
+access_token - os.environ["BOT_TOKEN"]
+client.run(access_token)
